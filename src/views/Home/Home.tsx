@@ -5,13 +5,12 @@ import NavbarCom from "../../components/Navbar/Navbar";
 import Card from "../../components/Card/Card";
 import appartments from "../../Utils/appartments.json";
 
-const Home = () => {
+const Home: React.FunctionComponent<any> = () => {
   if (!appartments || !appartments.length) {
     return <h1>Loading</h1>;
   }
   return (
-    <div>
-      <NavbarCom />
+    <div className="pb-5" style={{ background: "#ECEFF4" }}>
       <div className="container">
         <SearchBar />
         <Row className="mt-5">

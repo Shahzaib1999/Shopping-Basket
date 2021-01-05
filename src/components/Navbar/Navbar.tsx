@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -6,10 +7,10 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
-} from 'reactstrap';
+  NavLink,
+} from "reactstrap";
 
-import './style.css';
+import "./style.css";
 
 const NavbarCom = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,17 +19,23 @@ const NavbarCom = () => {
 
   return (
     <div>
-      <Navbar expand="md" style={{ background: '#0691d1', color: '#fff' }}>
+      <Navbar expand="md" style={{ background: "#0691d1", color: "#fff" }}>
         <div className="container">
-          <NavbarBrand href="/">{"<"}Shopping Cart {"/>"}</NavbarBrand>
+          <NavbarBrand href="/">
+            {"<"}Shopping Cart {"/>"}
+          </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Home</NavLink>
+                <NavLink>
+                  <Link to="/">Home</Link>
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Cart</NavLink>
+                <NavLink>
+                  <Link to="/cart">Cart</Link>
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>
@@ -36,6 +43,6 @@ const NavbarCom = () => {
       </Navbar>
     </div>
   );
-}
+};
 
 export default NavbarCom;
