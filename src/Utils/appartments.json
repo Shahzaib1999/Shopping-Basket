@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "name": "Elevate",
+    "image": "https://images1.apartments.com/i2/Mel4Hm5GU_A13jVZId0JNpI5il1Qshvtiie1_5bXZhY/117/elevate-chicago-il-building-photo.jpg",
+    "price": 12000
+  },
+  {
+    "id": "2",
+    "name": "The Residences at NewCity",
+    "image": "https://images1.apartments.com/i2/v-Mq5PcuqEW1Epeb98jP6HaOkF5wWRlV4jIrkHT_no0/117/the-residences-at-newcity-chicago-il-building-photo.jpg",
+    "price": 4400
+  },
+  {
+    "id": "3",
+    "name": "North+Vine",
+    "image": "https://images1.apartments.com/i2/C1w0oYpIUreHnQ9NpdhTlTGtbor5UkXMlgFmj9hudAs/117/northvine-chicago-il-building-photo.jpg",
+    "price": 7575
+  },
+  {
+    "id": "4",
+    "name": "Two West",
+    "image": "https://images1.apartments.com/i2/pgB_NNVK2nf5_tvs2_qGDCPPmszkxLC4xzAWj00P37s/117/two-west-chicago-il-building-photo.jpg",
+    "price": 9979
+  },
+  {
+    "id": "5",
+    "name": "The Oliver on LaSalle",
+    "image": "https://images1.apartments.com/i2/EQd5NtD3sRqI7l2ZwD8YFvbPeUe2DCK0-q9IBDkwVSo/117/the-oliver-on-lasalle-chicago-il-building-photo.jpg",
+    "price": 1500
+  },
+  {
+    "id": "6",
+    "name": "Mondial River West",
+    "image": "https://images1.apartments.com/i2/vBf-0-FNq5my1TVHxP4qmKSV9RVGQzcjMBnJDFw-9v4/117/mondial-river-west-chicago-il-building-photo.jpg",
+    "price": 6450
+  },
+  {
+    "id": "7",
+    "name": "EasyAcc WaterProof Speaker",
+    "image": "https://images1.apartments.com/i2/mvz8LcckRUqrBki-yjylhZpLojg6xcDz4qY5MphMn4I/117/1313-randolph-street-lofts-chicago-il-building-photo.jpg",
+    "price": 3825
+  },
+  {
+    "id": "8",
+    "name": "The Morgan at Loyola Station",
+    "image": "https://images1.apartments.com/i2/QjuqLzhskLUt0P15II0gq6R_JZoEeZt5hO1NkpouLbY/117/the-morgan-at-loyola-station-chicago-il-spacious-bedroom.jpg",
+    "price": 2650
+  },
+  {
+    "id": "9",
+    "name": "ELEVEN THIRTY",
+    "image": "https://images1.apartments.com/i2/Y6qbnII7Azzk0SphYRffkvh5SQFBR8Xo8tRtzy3DoEA/117/eleven-thirty-chicago-il-building-photo.jpg",
+    "price": 5000
+  }
+]

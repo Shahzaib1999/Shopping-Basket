@@ -1,15 +1,29 @@
-import {
-    Card, CardImg, CardBody, CardSubtitle, CardTitle 
-} from 'reactstrap';
+import { Card, CardImg, CardBody, CardSubtitle, CardTitle, Button } from "reactstrap";
 
-const NavbarCom = () => (
-    <Card>
-        <CardImg width="100" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHw%3D&w=1000&q=80" />
-        <CardBody>
-            <CardTitle tag="h6">$100</CardTitle>
-            <CardSubtitle tag="h6" className="text-muted">Card subtitle</CardSubtitle>
-        </CardBody>
-    </Card>
+import "./Card.css";
+interface Props {
+  id: String;
+  name: String;
+  price: Number;
+  image: string;
+}
+
+const MyCard: React.FunctionComponent<any> = ({
+  appartment,
+}: {
+  appartment: Props;
+}) => (
+  <Card className="appartment-card">
+    <CardImg className="card-image" src={appartment.image} />
+    <div className="card-body-wrapper">
+      <Button className="cartBtn">Add To Cart</Button>
+    </div>
+    <CardBody>
+      <CardTitle tag="h6">{appartment.name}</CardTitle>
+      <CardSubtitle tag="h6" className="text-muted">
+        ${appartment.price}
+      </CardSubtitle>
+    </CardBody>
+  </Card>
 );
-
-export default NavbarCom;
+export default MyCard;

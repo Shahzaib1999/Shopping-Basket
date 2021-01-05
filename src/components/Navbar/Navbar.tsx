@@ -18,7 +18,7 @@ const NavbarCom = () => {
 
   return (
     <div>
-      <Navbar expand="md" style={{ background: '#0B002A', color: '#fff' }}>
+      <Navbar expand="md" style={{ background: '#0691d1', color: '#fff' }}>
         <div className="container">
           <NavbarBrand href="/">{"<"}Shopping Cart {"/>"}</NavbarBrand>
           <NavbarToggler onClick={toggle} />
