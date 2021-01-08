@@ -1,6 +1,7 @@
 import { Row, Col, Card, CardBody } from "reactstrap";
 
 import CartComp from "../../components/Cart/Cart";
+import TotalCartComp from "../../components/Cart/TotalCart";
 // import appartments from "../../Utils/appartments.json";
 
 import "./Cart.css";
@@ -13,6 +14,8 @@ const Home: React.FunctionComponent<any> = () => {
           <CardBody>
             {/* <h2 className="text-center">Cart Is Empty</h2> */}
             <CartComp />
+            <CartComp />
+            <TotalCartComp />
           </CardBody>
         </Card>
       </div>

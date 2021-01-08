@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -7,7 +7,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
 } from "reactstrap";
 
 import "./style.css";
@@ -28,14 +27,12 @@ const NavbarCom = () => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink>
-                  <Link to="/">Home</Link>
+                <NavLink to="/" className="mr-4">
+                  Home
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink>
-                  <Link to="/cart">Cart</Link>
-                </NavLink>
+                <NavLink to="/cart">Cart</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

@@ -1,0 +1,5 @@
+@media (max-width: 767px) {
+  .searchbar-wrapper div {
+    margin-top: 20px;
+  }
+}
