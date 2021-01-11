@@ -1,3 +1,11 @@
+.search-input {
+  width: "100%";
+  border: 0;
+  border-bottom: "1px solid";
+  outline: "none";
+  border-color: "#ced4da";
+}
+
 @media (max-width: 767px) {
   .searchbar-wrapper div {
     margin-top: 20px;
