@@ -68,7 +68,7 @@ const Home: React.FunctionComponent<any> = () => {
   const onAdd = (e: Appartment) => {
     let filter = cart.filter((c: CartItem) => c.id === e.id);
     if (filter.length) {
-      return toast.warning("Apartment Already Exists In Cart");
+      return toast.warning("Appartment Already Exists In Basket");
     }
     dispatch(add(e));
     toast.success("Successfully Added");

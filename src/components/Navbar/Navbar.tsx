@@ -23,7 +23,7 @@ const NavbarCom = () => {
       <Navbar expand="md" style={{ background: "#0691d1", color: "#fff" }}>
         <div className="container">
           <NavbarBrand href="/">
-            {"<"}Apartment Cart {"/>"}
+            {"<"}Appartment Basket {"/>"}
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
@@ -35,7 +35,7 @@ const NavbarCom = () => {
               </NavItem>
               <NavItem>
                 <NavLink to="/cart">
-                  Cart {cart && cart.length ? `(${cart.length})` : ""}
+                  Basket {cart && cart.length ? `(${cart.length})` : ""}
                 </NavLink>
               </NavItem>
             </Nav>

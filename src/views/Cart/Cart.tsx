@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Button, Card, CardBody } from "reactstrap";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import { Link } from "react-router-dom";
 
 import CartComp from "../../components/Cart/Cart";
@@ -19,13 +19,14 @@ const Home: React.FunctionComponent<any> = () => {
   };
 
   const onCheckout = () => {
-    dispatch(empty());
     toast.success("Successfully Purchased");
+    dispatch(empty());
   };
 
   return (
     <div className="cart-wrapper" style={{ background: "#ECEFF4" }}>
       <div className="container">
+        <ToastContainer />
         <Card className="mb-5">
           <CardBody>
             {cart.length ? (
@@ -33,7 +34,7 @@ const Home: React.FunctionComponent<any> = () => {
                 <CartComp cart={item} key={ind} onRemove={onRemove} />
               ))
             ) : (
-              <h2 className="text-center">Cart Is Empty</h2>
+              <h2 className="text-center">Basket Is Empty</h2>
             )}
             <TotalCartComp total={total} />
           </CardBody>
