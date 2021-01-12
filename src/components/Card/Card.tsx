@@ -10,13 +10,15 @@ interface Props {
 
 const MyCard: React.FunctionComponent<any> = ({
   appartment,
+  onAdd 
 }: {
   appartment: Props;
+  onAdd: (e: Props) => void
 }) => (
   <Card className="appartment-card">
     <CardImg className="card-image" src={appartment.image} />
     <div className="card-body-wrapper">
-      <Button className="cartBtn">Add To Cart</Button>
+      <Button className="cartBtn" onClick={() => onAdd(appartment)}>Add To Cart</Button>
     </div>
     <CardBody>
       <CardTitle tag="h6">{appartment.name}</CardTitle>

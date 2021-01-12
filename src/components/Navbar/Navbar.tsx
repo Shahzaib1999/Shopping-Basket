@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import {
   Collapse,
@@ -13,6 +14,7 @@ import "./style.css";
 
 const NavbarCom = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const cart = useSelector((state: any) => state.cart.cart);
 
   const toggle = () => setIsOpen(!isOpen);
 
@@ -21,7 +23,7 @@ const NavbarCom = () => {
       <Navbar expand="md" style={{ background: "#0691d1", color: "#fff" }}>
         <div className="container">
           <NavbarBrand href="/">
-            {"<"}Shopping Cart {"/>"}
+            {"<"}Apartment Cart {"/>"}
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
@@ -32,7 +34,9 @@ const NavbarCom = () => {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/cart">Cart</NavLink>
+                <NavLink to="/cart">
+                  Cart {cart && cart.length ? `(${cart.length})` : ""}
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>

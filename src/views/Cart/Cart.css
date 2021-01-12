@@ -2,3 +2,17 @@
   padding-top: 50px;
   min-height: 92vh;
 }
+
+.btn-continue {
+  background-color: #0691d1 !important;
+  border-color: #0691d1 !important;
+}
+
+.btn-continue a {
+  color: inherit;
+}
+
+.btn-continue a:hover {
+  text-decoration: none;
+  color: inherit;
+}

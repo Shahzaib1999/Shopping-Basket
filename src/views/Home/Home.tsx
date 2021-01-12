@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Row, Col } from "reactstrap";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-import NavbarCom from "../../components/Navbar/Navbar";
+import SearchBar from "../../components/SearchBar/SearchBar";
 import Card from "../../components/Card/Card";
 import appartments from "../../Utils/appartments.json";
 import "./Home.css";
-
+import { add } from "../../store/cartReducer";
+import { CartItem } from "../../store/types";
 interface Appartment {
   id: String;
   name: String;
@@ -18,6 +21,8 @@ interface Appartment {
 const Home: React.FunctionComponent<any> = () => {
   const [filteredData, setFilteredData] = useState<Appartment[]>([]);
   const [data, setData] = useState<Appartment[]>([]);
+  const cart = useSelector((state: any) => state.cart.cart);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setData(appartments);
@@ -60,23 +65,36 @@ const Home: React.FunctionComponent<any> = () => {
     }
   };
 
+  const onAdd = (e: Appartment) => {
+    let filter = cart.filter((c: CartItem) => c.id === e.id);
+    if (filter.length) {
+      return toast.warning("Apartment Already Exists In Cart");
+    }
+    dispatch(add(e));
+    toast.success("Successfully Added");
+  };
+
   if (!appartments || !appartments.length) {
     return <h1>Loading</h1>;
   }
   return (
     <div className="home-wrapper pb-5" style={{ background: "#ECEFF4" }}>
       <div className="container">
+        <ToastContainer />
         <SearchBar
           onSearch={(e) => onSearch(e)}
           onSort={(e: String) => onSort(e)}
         />
         <Row className="mt-5">
-          {filteredData.length &&
+          {filteredData.length ? (
             filteredData.map((appartment, ind) => (
               <Col key={ind} md={4} className="mt-4">
-                <Card appartment={appartment} />
+                <Card appartment={appartment} onAdd={onAdd} />
               </Col>
-            ))}
+            ))
+          ) : (
+            <h1>No Appartment Found</h1>
+          )}
         </Row>
       </div>
     </div>

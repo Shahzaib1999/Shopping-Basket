@@ -2,7 +2,11 @@ import { Row, Col, Input } from "reactstrap";
 
 import "./Cart.css";
 
-const CartComp: React.FunctionComponent<any> = () => (
+const CartComp: React.FunctionComponent<any> = ({
+  total,
+}: {
+  total: Number;
+}) => (
   <Row className="total-cart-wrapper">
     <Col md={2} sm={1} xs={0} className="total-cart-image"></Col>
     <Col md={3} sm={4} xs={12} className="cart-center font-grey title">
@@ -12,10 +16,12 @@ const CartComp: React.FunctionComponent<any> = () => (
       <p>Total</p>
     </Col>
     <Col
-      md={3} sm={3} xs={6}
+      md={3}
+      sm={3}
+      xs={6}
       className="cart-center pr-5 justify-content-end border-0 font-grey"
     >
-      <p>$20000</p>
+      <p>${total}</p>
     </Col>
   </Row>
 );
